@@ -1,8 +1,9 @@
 import express, { type Request, type Response } from "express";
 import { PORT } from "./config/server.config";
 import apiRouter from "./routes";
+import cors from "cors";
 const app = express();
-// const x = "test";
+app.use(cors());
 
 app.use("/api", apiRouter);
 
