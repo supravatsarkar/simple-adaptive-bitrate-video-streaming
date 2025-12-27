@@ -51,8 +51,10 @@ export const processVideoForHls = (
       .on("end", () => {
         const bandwidth = resolution.bitrate * 1000 * 1.5; // as per recommended // in bit per second
         const averageBandwidth = resolution.bitrate * 1000; // in bit per second // optional but recommended
+        // const variantPlaylistForMasterPlaylist = `variantPlaylist`;
+        const variantPlaylistForMasterPlaylist = `${resolution.height}p/playlist.m3u8`;
         masterPlayListContent.push(
-          `#EXT-X-STREAM-INF: BANDWIDTH=${bandwidth}, AVERAGE-BANDWIDTH=${averageBandwidth}, RESOLUTION=${resolution.width}x${resolution.height}\n ${variantPlaylist}`
+          `#EXT-X-STREAM-INF: BANDWIDTH=${bandwidth}, AVERAGE-BANDWIDTH=${averageBandwidth}, RESOLUTION=${resolution.width}x${resolution.height}\n ${variantPlaylistForMasterPlaylist}`
         );
         console.log("Process completed for ", resolution.height);
         processCount++;
