@@ -20,12 +20,13 @@ export default function VideoPlayer() {
         <video
           id="my-player"
           width="640px"
-          // height="267px"
+          height="267px"
           className="video-js mx-auto rounded-4 shadow-lg"
           controls
           preload="auto"
+          autoPlay={true}
           // poster="//vjs.zencdn.net/v/oceans.png"
-          data-setup="{}"
+          data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'
         >
           <source src={videoUrl}></source>
         </video>
