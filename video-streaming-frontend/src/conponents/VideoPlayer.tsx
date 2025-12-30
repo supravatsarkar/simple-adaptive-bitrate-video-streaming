@@ -11,7 +11,7 @@ export default function VideoPlayer() {
         src={videoUrl}
         poster="https://cdn.example.com/videos/movie/poster.jpg"
       /> */}
-        <h1 className="text-amber-500 text-center">Video Title</h1>
+        <h1 className="text-amber-500 text-center">Video Id : {videoId}</h1>
         {/* <video
         className="video-js w-full"
         data-setup='{"controls": true, "autoplay": false, "preload": "auto"}'
