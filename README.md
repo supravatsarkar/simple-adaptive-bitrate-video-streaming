@@ -1,0 +1,4 @@
+-A simple adaptive video streaming app. 
+-User can upload any video. Video will process into different resolution to server according end user's internet connection.
+-Video processing and uploading in same server storage (Not using object storage service). 
+-Play video using video.js 
